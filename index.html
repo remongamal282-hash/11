@@ -50,7 +50,7 @@
         const loader = document.getElementById('loader');
 
         try {
-            // استخدام بروكسي "corsproxy.io" وهو الأنسب حالياً لموقعك
+            // استخدام بروكسي "corsproxy.io" وهو الأنسب حالياً لموقعك على GitHub
             const response = await fetch(`https://corsproxy.io/?${encodeURIComponent(API_URL)}`);
             
             if (!response.ok) throw new Error();
@@ -99,9 +99,9 @@
         } catch (error) {
             loader.style.display = 'none';
             statusText.innerHTML = `
-                <div class="alert alert-danger shadow-sm">
-                    <i class="fas fa-exclamation-triangle ms-2"></i>
-                    فشل الاتصال بخادم الشركة. يرجى المحاولة لاحقاً.
+                <div class="alert alert-warning shadow-sm d-inline-block">
+                    <i class="fas fa-exclamation-circle ms-2"></i>
+                    فشل الاتصال بخادم الشركة. يرجى المحاولة لاحقاً أو التأكد من استقرار الإنترنت.
                 </div>`;
         }
     }
